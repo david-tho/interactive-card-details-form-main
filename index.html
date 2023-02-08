@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body class="container">
+    <div class="background">
+      <div class="card">
+        <div class="card__front">
+          <img class="card__logo" src="/images/card-logo.svg" alt="" />
+          <span class="card__number card__number-text"
+            >0000 0000 0000 0000</span
+          >
+          <div class="user-data">
+            <p class="username-text">Jane Appleseed</p>
+            <span class="date">
+              <span class="month">00</span>/<span class="year">00</span>
+            </span>
+          </div>
+        </div>
+        <div class="card__back">
+          <span class="card__back-cvc cvc-text">000</span>
+        </div>
+      </div>
+    </div>
+    <section class="section-submit">
+      <form class="form form__fill" action="#">
+        <div class="form__username">
+          <label class="form__label" for="username-input"
+            >Cardholder Name</label
+          >
+          <input
+            class="form__input"
+            type="text"
+            id="username-input"
+            placeholder="e.g. Jane Appleseed"
+          />
+          <p class="form__error--message">Can't be blank</p>
+        </div>
+
+        <div class="form__card">
+          <label class="form__label" for="card-input">Card Number</label>
+          <input
+            class="form__input"
+            id="card-input"
+            type="text"
+            placeholder="e.g. 1234 5678 9123 0000"
+            maxlength="16"
+          />
+          <p class="form__error--message">Can't be blank</p>
+        </div>
+
+        <div class="form__expire-code">
+          <div class="form__date">
+            <label class="form__label form__label__date" for="month-input"
+              >Exp. Date (MM/YY)</label
+            >
+            <div class="form__date--fill">
+              <div class="form__date--month">
+                <input
+                  class="form__input form__input--date"
+                  id="month-input"
+                  type="datetime"
+                  name="month"
+                  placeholder="MM"
+                  maxlength="2"
+                />
+                <p class="form__error--message">Can't be blank</p>
+              </div>
+
+              <div class="form__date--year">
+                <input
+                  class="form__input form__input--date"
+                  id="year-input"
+                  type="datetime"
+                  placeholder="YY"
+                  maxlength="2"
+                />
+                <p class="form__error--message">Can't be blank</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form__cvc">
+            <label class="form__label" for="cvc-input">CVC</label>
+            <input
+              class="form__input"
+              id="cvc-input"
+              type="cvc"
+              placeholder="e.g. 123"
+              maxlength="3"
+            />
+            <p class="form__error--message">Can't be blank</p>
+          </div>
+        </div>
+
+        <button class="btn btn-click form__button">Confirm</button>
+      </form>
+      <div class="form__completed hidden">
+        <img
+          class="form__completed--icon"
+          src="/images/icon-complete.svg"
+          alt=""
+        />
+        <h2 class="form__completed--heading">Thank you!</h2>
+        <p class="form__completed--info">We've added your card details</p>
+        <button class="btn">Continue</button>
+      </div>
+    </section>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
