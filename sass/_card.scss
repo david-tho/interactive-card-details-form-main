@@ -1,0 +1,82 @@
+.card {
+  color: $color-white;
+  font-size: $default-font-size;
+  display: flex;
+  backface-visibility: hidden;
+  overflow: hidden;
+
+  &__front {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 2.3rem;
+    padding: 3.2rem;
+    width: 45rem;
+    height: 24.5rem;
+    background-image: url(../images/bg-card-front.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    border-radius: 2rem;
+
+    animation: moveToRight 1.2s ease-out;
+
+    @media only screen and (max-width: $bp-sd) {
+      left: 30%;
+    }
+
+    @media only screen and (max-width: $bp-mp) {
+      top: 48%;
+      left: 3rem;
+      width: 70%;
+      height: 60%;
+      z-index: 1;
+    }
+  }
+
+  .user-data {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+  }
+
+  &__back {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 5.6rem 5.6rem 6.2rem 0;
+    background-image: url(../images/bg-card-back.png);
+    background-repeat: no-repeat;
+    width: 45rem;
+    height: 24.5rem;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    border-radius: 2rem;
+
+    animation: moveToCenter 1.2s ease-out;
+
+    @media only screen and (max-width: $bp-sd) {
+      left: 35%;
+    }
+
+    @media only screen and (max-width: $bp-mp) {
+      padding-right: 7rem;
+      text-align: right;
+      top: 3rem;
+      left: 20%;
+      height: 61%;
+      width: 75%;
+    }
+  }
+
+  &__logo {
+    width: 6.2rem;
+    height: 3.6rem;
+  }
+
+  &__number {
+    font-size: 3.2rem;
+  }
+}

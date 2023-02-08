@@ -1,0 +1,12 @@
+.form {
+  &__error--message {
+    display: none;
+    font-size: 1.2rem;
+    color: $error-color;
+
+    &.active {
+      margin-top: 0.5rem;
+      display: block;
+    }
+  }
+}

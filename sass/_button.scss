@@ -1,0 +1,21 @@
+.btn {
+  font-family: inherit;
+  background-color: $color-very-dark-violet;
+  border: none;
+  color: $color-white;
+  padding: 2.4rem;
+  font-size: $default-font-size;
+  font-weight: 500;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: $color-very-dark-violet-1;
+  }
+
+  &:active {
+    transform: translateY(-0.2rem);
+  }
+}
